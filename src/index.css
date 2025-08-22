@@ -13,7 +13,7 @@ main {
   max-width: 600px;
 }
 
-.header {
+header {
   display: flex;
   align-items: center;
   height: 65px;
@@ -22,12 +22,14 @@ main {
   padding: 20px;
 }
 
-.header > img {
+header > img {
+  scale: 2.5;
   height: 100%;
-  margin-right: 6px;
+  margin-left: 15px;
+  margin-right: 20px;
 }
 
-.header > h1 {
+header > h1 {
   font-size: 1.25rem;
   margin-right: auto;
 }
