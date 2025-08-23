@@ -1,3 +1,106 @@
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+main {
+  margin-inline: auto;
+  padding: 36px;
+  max-width: 600px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  color: white;
+  padding: 20px;
+}
+
+header > img {
+  scale: 2.5;
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+header > h1 {
+  font-size: 1.25rem;
+  margin-right: auto;
+}
+
+.form {
+  display: grid;
+  grid-template: auto auto / 1fr 1fr;
+  gap: 17px;
+  margin-bottom: 17px;
+}
+
+.form input {
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #d5d4d8;
+  text-indent: 5px;
+}
+
+.form button {
+  grid-column: 1 / -1;
+  border-radius: 5px;
+  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form input,
+.form button {
+  min-height: 40px;
+  font-family: "Karla", sans-serif;
+}
+
+.meme {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.meme span {
+  position: absolute;
+  text-align: center;
+  margin-block: 15px;
+  padding-inline: 5px;
+  font-family: impact, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+} */
+
 * {
   box-sizing: border-box;
 }
@@ -99,4 +202,60 @@ header > h1 {
 
 .top {
   top: 0;
+}
+
+/* ===================== */
+/* 📱 Responsive Styles */
+/* ===================== */
+
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+  }
+
+  header {
+    height: auto;
+    padding: 15px;
+  }
+
+  header > img {
+    scale: 2;
+    margin: 0 10px 0 0;
+  }
+
+  header > h1 {
+    font-size: 1rem;
+  }
+
+  .form {
+    grid-template-columns: 1fr; /* stack inputs */
+    gap: 12px;
+  }
+
+  .form input,
+  .form button {
+    font-size: 0.9rem;
+    min-height: 36px;
+  }
+
+  .meme span {
+    font-size: 1.2rem; /* smaller text on mobile */
+    margin-block: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  header > h1 {
+    font-size: 0.9rem;
+  }
+
+  .meme span {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .form button {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
 }
